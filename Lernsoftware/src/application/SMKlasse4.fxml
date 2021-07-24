@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SMKlasse4Controller">
+   <content>
+      <BorderPane prefHeight="699.0" prefWidth="988.0">
+         <top>
+            <AnchorPane prefHeight="71.0" prefWidth="768.0" style="-fx-background-color: #0B4C5F;" BorderPane.alignment="CENTER">
+               <children>
+                  <SplitMenuButton fx:id="profile" layoutX="868.0" layoutY="25.0" mnemonicParsing="false" text="Profil">
+                    <items>
+                      <MenuItem fx:id="favorites" mnemonicParsing="false" onAction="#dropdownFavorites" text="Favoriten" />
+                      <MenuItem fx:id="setups" mnemonicParsing="false" onAction="#dropdownSetups" text="Einstellungen" />
+                        <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#dropdownLogout" text="Abmelden" />
+                    </items>
+                  </SplitMenuButton>
+                  <Hyperlink fx:id="menuKleinkinder" layoutX="210.0" layoutY="2.0" onAction="#goTo" prefHeight="71.0" prefWidth="121.0" text="Kleinkinder" textFill="#fafafa">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="menuSchueler" layoutX="374.0" layoutY="2.0" onAction="#goTo" prefHeight="71.0" prefWidth="82.0" text="Schüler" textFill="#f4bd30">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="menuStudenten" layoutX="494.0" layoutY="2.0" onAction="#goTo" prefHeight="71.0" prefWidth="110.0" text="Studenten" textFill="#fafafa">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="menuErwachsene" layoutX="646.0" layoutY="2.0" onAction="#goTo" prefHeight="71.0" prefWidth="124.0" text="Erwachsene" textFill="#fafafa">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="768.0" prefWidth="986.0" style="-fx-background-color: #fafafa;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="379.0" prefWidth="162.0">
+                     <children>
+                        <VBox layoutX="31.0" layoutY="45.0" prefHeight="29.0" prefWidth="100.0">
+                           <children>
+                              <Hyperlink fx:id="sidemenuFavorites" onAction="#goTo" prefHeight="24.0" prefWidth="94.0" text="Favoriten" textFill="#0b4c5f">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Hyperlink>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="sidemenu" layoutX="31.0" layoutY="100.0" prefHeight="226.0" prefWidth="100.0">
+                           <children>
+                              <Hyperlink fx:id="sidemenuMathe" onAction="#goTo" prefHeight="24.0" prefWidth="110.0" text="Mathe" textFill="#0b4c5f">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Hyperlink>
+                              <Hyperlink fx:id="sidemenuDeutsch" onAction="#goTo" prefHeight="24.0" prefWidth="86.0" text="Deutsch" textFill="#0b4c5f">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Hyperlink fx:id="sidemenuEnglisch" onAction="#goTo" prefHeight="24.0" prefWidth="110.0" text="Englisch" textFill="#0b4c5f">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Hyperlink>
+                           </children>
+                        </VBox>
+                        <Line endX="-99.99999237060547" endY="82.60002136230469" layoutX="129.0" layoutY="91.0" startX="-99.99999237060547" startY="11.999992370605469" stroke="#0b4c5f" strokeWidth="0.8" />
+                        <Line endX="-99.99999237060547" endY="22.000022888183594" layoutX="129.0" layoutY="46.0" startX="-100.0" stroke="#0b4c5f" strokeWidth="0.8" />
+                     </children>
+                  </AnchorPane>
+                  <TextField fx:id="search" layoutX="210.0" layoutY="43.0" onAction="#searchFor" prefHeight="26.0" prefWidth="391.0" promptText="Suche im Bereich Schüler" />
+                  <SplitMenuButton fx:id="klasse" layoutX="639.0" layoutY="43.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="26.0" prefWidth="117.0" text="Klasse 4" textFill="#0b4c5f">
+                     <items>
+                        <MenuItem fx:id="klasse1" mnemonicParsing="false" onAction="#dropdownKlasse1" text="Klasse 1" />
+                        <MenuItem fx:id="klasse2" mnemonicParsing="false" onAction="#dropdownKlasse2" text="Klasse 2" />
+                        <MenuItem fx:id="klasse3" mnemonicParsing="false" onAction="#dropdownKlasse3" text="Klasse 3" />
+                        <MenuItem fx:id="klasse4" mnemonicParsing="false" onAction="#dropdownKlasse4" text="Klasse 4" />
+                        <MenuItem fx:id="klasse5" mnemonicParsing="false" onAction="#dropdownKlasse5" text="Klasse 5" />
+                        <MenuItem fx:id="klasse6" mnemonicParsing="false" onAction="#dropdownKlasse6" text="Klasse 6" />
+                     </items>
+                  </SplitMenuButton>
+                  <Hyperlink fx:id="breadcrumbM" layoutX="207.0" layoutY="10.0" onAction="#goTo" text="Schüler" textFill="#0b4c5f" />
+                  <Text fill="#0b4c5f" layoutX="254.0" layoutY="25.5" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;&gt;" />
+                  <Hyperlink fx:id="breadcrumbSM" layoutX="270.0" layoutY="10.0" onAction="#goTo" text="Klasse 4" textFill="#0b4c5f">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Hyperlink>
+                  <Text fill="#ababab" layoutX="210.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Keine Beiträge vorhanden">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="wrongSearch" layoutX="210.0" layoutY="70.0" prefHeight="18.0" prefWidth="205.0" textFill="RED" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

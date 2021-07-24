@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LandingPageController">
+   <content>
+      <BorderPane prefHeight="699.0" prefWidth="987.0">
+         <top>
+            <AnchorPane prefHeight="71.0" prefWidth="768.0" style="-fx-background-color: #0B4C5F;" BorderPane.alignment="CENTER">
+               <children>
+                  <SplitMenuButton fx:id="profile" layoutX="868.0" layoutY="25.0" mnemonicParsing="false" text="Profil">
+                    <items>
+                      <MenuItem fx:id="favorites" mnemonicParsing="false" onAction="#dropdownFavorites" text="Favoriten" />
+                      <MenuItem fx:id="setups" mnemonicParsing="false" onAction="#dropdownSetups" text="Einstellungen" />
+                        <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#dropdownLogout" text="Abmelden" />
+                    </items>
+                  </SplitMenuButton>
+                  <Hyperlink fx:id="menuKleinkinder" layoutX="210.0" layoutY="2.0" onAction="#goTo" prefHeight="71.0" prefWidth="121.0" text="Kleinkinder" textFill="#fafafa">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="menuSchueler" layoutX="374.0" layoutY="2.0" onAction="#goTo" prefHeight="71.0" prefWidth="82.0" text="Schüler" textFill="#fafafa">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="menuStudenten" layoutX="494.0" layoutY="2.0" onAction="#goTo" prefHeight="71.0" prefWidth="110.0" text="Studenten" textFill="#fafafa">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="menuErwachsene" layoutX="646.0" layoutY="2.0" onAction="#goTo" prefHeight="71.0" prefWidth="124.0" text="Erwachsene" textFill="#fafafa">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="624.0" prefWidth="987.0" style="-fx-background-color: #fafafa;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imgKleinkinder" fitHeight="240.0" fitWidth="360.0" layoutX="112.0" layoutY="71.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Kleinkind.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgSchueler" fitHeight="240.0" fitWidth="360.0" layoutX="516.0" layoutY="71.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Schueler.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgStudenten" fitHeight="240.0" fitWidth="360.0" layoutX="112.0" layoutY="345.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Student.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgErwachsene" fitHeight="240.0" fitWidth="360.0" layoutX="516.0" layoutY="345.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Erwachsene.jpg" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="search" layoutX="211.0" layoutY="24.0" onAction="#searchFor" prefHeight="26.0" prefWidth="565.0" promptText="Suche über alle Bereiche" />
+                  <Hyperlink fx:id="linkKleinkinder" alignment="TOP_LEFT" layoutX="118.0" layoutY="200.0" onAction="#goTo" prefHeight="46.0" prefWidth="329.0" text="Kleinkinder" textFill="#0b4c5f">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Hyperlink>
+                  <Text layoutX="125.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." wrappingWidth="333.3367004394531" />
+                  <Hyperlink fx:id="linkSchueler" alignment="TOP_LEFT" layoutX="525.0" layoutY="201.0" onAction="#goTo" prefHeight="46.0" prefWidth="329.0" text="Schüler" textFill="#0b4c5f">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Hyperlink>
+                  <Text layoutX="532.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." wrappingWidth="333.3367004394531" />
+                  <Hyperlink fx:id="linkStudenten" alignment="TOP_LEFT" layoutX="121.0" layoutY="482.0" onAction="#goTo" prefHeight="46.0" prefWidth="329.0" text="Studenten" textFill="#0b4c5f">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Hyperlink>
+                  <Text layoutX="128.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." wrappingWidth="333.3367004394531" />
+                  <Hyperlink fx:id="linkErwachsene" alignment="TOP_LEFT" layoutX="528.0" layoutY="483.0" onAction="#goTo" prefHeight="46.0" prefWidth="329.0" text="Erwachsene" textFill="#0b4c5f">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Hyperlink>
+                  <Text layoutX="535.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." wrappingWidth="333.3367004394531" />
+                  <Label fx:id="wrongSearch" layoutX="211.0" layoutY="51.0" prefHeight="18.0" prefWidth="205.0" textFill="RED" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

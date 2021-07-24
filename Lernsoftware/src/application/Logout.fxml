@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LogoutController">
+   <top>
+      <AnchorPane prefHeight="71.0" prefWidth="600.0" style="-fx-background-color: #0b4c5f;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="txtLogin" fill="WHITE" layoutX="434.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abmeldung" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fafafa;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#0b4c5f" layoutX="312.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auf Wiedersehen!">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Text>
+            <Button fx:id="goToLogin" layoutX="450.0" layoutY="314.0" mnemonicParsing="false" onAction="#goTo" text="Neu anmelden?" textFill="#0b4c5f" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
